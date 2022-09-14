@@ -1,8 +1,8 @@
 const extractData = {
     extractAppsFromAccountData: (accountData) => {
         const appsObjects = accountData.apps
-        const appsIds = appsObjects.map((app) => app._id.split("|")[1])
-        return appsIds
+        appsObjects.map((app) => app.id=app._id.split("|")[1])
+        return appsObjects
     },
     extractAdminEmailFromAccountData: (accountData) => {
         return accountData.user.email
